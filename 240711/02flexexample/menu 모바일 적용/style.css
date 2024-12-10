@@ -1,0 +1,70 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 가변적인 걸 선호하지 고정적인것은 실무에서 안씀
+고로 px은 잘 안씀 height나 width를 주지않고 padding값을 주는 것이 더 좋음*/
+body {
+  background: #eee;
+  header {
+    background: #fff;
+    display: flex;
+    padding: 20px;
+    .logo {
+      flex: 1;
+    }
+    .gnb {
+      flex: 6;
+      ul {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .search {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}
+/* flex-glow = flex로 줘도됨 */
+/*  반응형 웹페이지에는 미디어쿼리를 씀 */
+/* 태블릿 같은 매체를 사용할 때만 width줌 모바일에는 길어봐야 420px 데스크탑에서는 보통 max-width만 씀
+#main_header{flex-direction: column}이랑 body>header {flex-direction}구조로 쓰는거와
+스타일은 동일하지만 웬만하면 동일 구조 내에서 쓰는것이 좋음*/
+@media screen and (max-width: 780px) {
+  body {
+    header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .gnb {
+        ul {
+          gap: 10px; /* ul태그에 flex가 있었으니 속성을 물려받아 가로로 갭이 생기는 것임 */
+        }
+      }
+      .search {
+        input[type="search"] {
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid #eee;
+          &:focus {
+            outline: none; /*클릭시 테두리 안생기게 (모바일로만 적용됨)*/
+          }
+        }
+      }
+    }
+  }
+}

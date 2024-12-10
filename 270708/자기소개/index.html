@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Mini Homepage</title>
+    <style>
+      body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        background: url("background-image.jpg") no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+      }
+      .frame {
+        width: 80%;
+        margin: 50px auto;
+        border: 5px solid #ccc;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .profile {
+        text-align: center;
+      }
+      .profile img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+      .profile h1 {
+        font-size: 24px;
+        color: #333;
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+      }
+      .menu li {
+        margin: 0 10px;
+      }
+      .menu a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+      }
+      .content {
+        margin-top: 20px;
+      }
+      .diary,
+      .photo-gallery,
+      .guestbook {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="profile">
+        <img src="profile-pic.jpg" alt="Profile Picture" />
+        <h1>My Nickname</h1>
+        <p>Status message goes here...</p>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Photo Gallery</a></li>
+        <li><a href="#">Diary</a></li>
+        <li><a href="#">Guestbook</a></li>
+      </ul>
+      <div class="content">
+        <div class="diary">
+          <h2>Latest Diary Entry</h2>
+          <p>This is a summary of the latest diary entry...</p>
+        </div>
+        <div class="photo-gallery">
+          <h2>Photo Gallery</h2>
+          <!-- Thumbnails of recent photos -->
+        </div>
+        <div class="guestbook">
+          <h2>Guestbook</h2>
+          <!-- Guestbook entries -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

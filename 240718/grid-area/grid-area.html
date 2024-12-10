@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        border: 5px solid #000;
+        background: khaki;
+        width: 500px;
+        height: 300px;
+        display: grid;
+        div {
+          border: 1px solid #000;
+          &.item1 {
+            background: crimson;
+            grid-area: 1/1 / 2/3; /*하나의 행에 두개의 열 사용*/
+          }
+          &.item2 {
+            background: yellowgreen;
+            grid-area: 1/2 / 3/3;
+            z-index: 1;
+            /*누가 앞으로 나오게 할 것이냐인데 가장 마지막에 입력된 요소가 위로 튀어나옴. 2번이 가장 위로 올라오게 하려면 1번. 나머지는 z-index가 0인 상태임*/
+          }
+          &.item3 {
+            background: dodgerblue;
+            grid-area: 2/2 / 3/4;
+          }
+          /*grid는 먼저 올린게 마지막으로 깔리고, 마지막에 깔린게 위로 간다.*/
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+    </div>
+  </body>
+</html>

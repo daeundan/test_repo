@@ -1,0 +1,44 @@
+@import url(./reset.css);
+
+header {
+  background: var(--main-bgColor);
+  height: 60px;
+  display: flex; /* 한 줄로 정렬*/
+  justify-content: center; /* 중앙에 정렬 */
+  align-items: center; /* 텍스트들 - 중앙에 오게*/
+  nav {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between; /*각각의 요소들 떨어지게*/
+    .logo {
+      img {
+        filter: invert(); /* 로고 이미지 색상 변경 */
+      }
+    }
+    .gnb {
+      ul {
+        display: flex;
+        gap: 10px;
+        li {
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .sns {
+      display: flex;
+      gap: 20px;
+      text-align: center;
+      a {
+        color: #fff;
+      }
+    }
+    .trigger {
+      display: none;
+    }
+  }
+}
+/* 미디어 쿼리 */
+@media screen and (max-width: 780px) {
+}

@@ -1,0 +1,28 @@
+.inner {
+  .parent {
+    width: 100vh;
+    height: 100vh;
+    background: khaki;
+    display: grid;
+    border: 1px solid #000;
+    &.header {
+      height: 500px;
+      width: 100vh;
+      background: url(./img/best-item-01.png);
+    }
+    &.gnb {
+      grid-area: gnb;
+      background-color: #7897bc;
+    }
+    &.content {
+      grid-area: content;
+    }
+    &.lnb {
+      grid-area: lnb;
+    }
+    &.footer {
+      grid-area: footer;
+      background-color: #5f0080;
+    }
+  }
+}

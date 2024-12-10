@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Pen+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul,
+li {
+  list-style: none;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* button */
+  button {
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    display: block;
+    color: #888;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background: #fff;
+      columns: rgb(141, 99, 86);
+      border: 1px solid rgb(141, 99, 86);
+    }
+  }
+  /* modal */
+  #modal_box {
+    /* width: 100%;
+    height: 100%; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    display: none; /* after : none */
+    justify-content: center;
+    align-items: center;
+    &.active {
+      display: flex;
+    }
+    #modal_contents {
+      background: #fff;
+      width: 300px;
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 50px;
+      }
+      #close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        i {
+          font-size: 14px;
+        }
+      }
+      #profile {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 26px 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        /* padding: 10px; */
+      }
+      #desc {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  @media screen and (max-width: 770px) and (min-width: 360px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,65 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #eee;
+  header {
+    background: #0984e3;
+    color: white;
+    display: flex;
+    padding: 10px;
+    .logo {
+      flex: 1;
+
+      p {
+        flex-direction: column;
+        font-size: 20px;
+      }
+    }
+    .gnb {
+      flex: 6;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .icon {
+        text-align: right;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  body {
+    header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .gnb {
+        ul {
+          gap: 10px; /* ul태그에 flex가 있었으니 속성을 물려받아 가로로 갭이 생기는 것임 */
+        }
+      }
+    }
+  }
+}
