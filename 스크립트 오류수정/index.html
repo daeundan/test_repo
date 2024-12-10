@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #222;
+      .items {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .item {
+          position: relative;
+          text-align: center;
+          width: 300px;
+          height: 200px;
+          border: 1px solid #222;
+          border-radius: 5px 5px 0 0;
+          .front,
+          .back {
+            position: absolute;
+            top: 0;
+          }
+          .front {
+            background-color: #333;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px 5px 0 0;
+            color: #fff;
+            transition: all 0.5s;
+            z-index: 1;
+            #img1,
+            #img2,
+            #img3 {
+              margin-top: 10px;
+              width: 150px;
+              height: 150px;
+            }
+          }
+          &:hover .front {
+            top: -50%;
+            img {
+              animation: ani 1s linear infinite;
+            }
+          }
+          .back {
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding: 40px;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.5s;
+            a {
+              color: #fff;
+              display: inline-block;
+              margin-top: 20px;
+              padding: 5px 15px;
+              border-radius: 20px;
+            }
+          }
+          &:hover .back {
+            top: 50%;
+          }
+        }
+      }
+    }
+
+    @keyframes ani {
+      0% {
+        transform: scale(0.9);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(0.9);
+      }
+    }
+    #skill-content:target {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      color: #222;
+    }
+  </style>
+  <body>
+    <main id="app_container">
+      <header id="navigation_heading">
+        <nav id="navigation">
+          <ul class="gnbDesktop">
+            <i id="gnbbtn" class="fa-solid fa-xmark close-icon"></i>
+            <li><a href="skills-content">Skills</a></li>
+            <li><a href="projects-content">Career</a></li>
+            <li><a href="contact-content">Contact</a></li>
+          </ul>
+          <ul class="gnbMobile">
+            <li><a href="skills-content">Skills</a></li>
+            <li><a href="projects-content">Projects</a></li>
+            <li><a href="contact-content">Contact</a></li>
+          </ul>
+        </nav>
+        <div id="skills-content" class="gnbcontent">
+          <!-- <p> 현재 저의 능력은 이렇습니다! </p> -->
+          <div class="wrapper">
+            <ul class="graph">
+              <img
+                id="ps"
+                src="./img/icon01.png"
+                alt="ps"
+                width="50px"
+                height="50px"
+              />
+              <li class="photoshop">
+                <h2>Title</h2>
+                <strong>0%</strong>
+              </li>
+              <img src="./img/icon02.png" alt="ai" width="50px" height="50px" />
+              <li class="illustrator">
+                <h2>Title</h2>
+                <strong>0%</strong>
+              </li>
+              <img
+                src="./img/icon03.jpg"
+                alt="html"
+                width="50px"
+                height="50px"
+              />
+              <li class="HTML">
+                <h2>Title</h2>
+                <strong>0%</strong>
+              </li>
+              <img
+                src="./img/icon04.jpg"
+                alt="css"
+                width="50px"
+                height="50px"
+              />
+              <li class="CSS">
+                <h2>Title</h2>
+                <strong>0%</strong>
+              </li>
+              <img src="./img/icon05.jpg" alt="js" width="50px" height="50px" />
+              <li class="Java.scripts">
+                <h2>Title</h2>
+                <strong>0%</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="projects-content">
+          <p>2022.09~2022.12 서울특별시 교육청 공립 미술 교사</p>
+          <p>
+            고등학교 동아리 축제 기획 및 브로슈어 디자인 제작, 고등학교 2,
+            3학년을 대상으로 미술 감상과 비평 수업을 위한 자료 제작, 수업 실행
+            등 미술 교사 업무를 진행함.
+          </p>
+          <p>2023.02~2023.07 교학사 [초등 미술 교과서] 편집, 개발 팀원</p>
+          <p>
+            2023.07~2024.02 천재교육 [고등 미술과 매체 교과서] 편집, 개발 팀장
+          </p>
+          <p>
+            22개정 고등 인정 [미술과 매체] 교과서 개발. 천재교육 초등 개발 본부
+            예체능팀의 [미술과 매체] 교과서 팀의 팀장으로 일하며 2022 개정
+            교육과정의 편성과 성취 기준, 편수자료 등을 파악하고, 전반적인 편집,
+            디자인, 교정, 교열, 삽화 발주, 외부 촬영, 집필진 회의 등을 리드하며
+            진행함. 고등학교 미술 교과서는 작품이 많이 수록되기 때문에 이에
+            관련하여 교과서에 수록될 작품에 대한 저작권 해결을 위해 적절한 국내/
+            외 작가를 선정, 컨텍하여 작가마다 사용 동의를 받음. 저자와의
+            커뮤니케이션을 진행하는 과정에서 공감, 설득, 회유 등의
+            커뮤니케이션을 하며 신뢰있는 편집자와 집필자의 관계를 유지함.
+          </p>
+        </div>
+        <div id="contact-content" class="gnbcontent">
+          <p>연락하는 방법 어쩌구</p>
+        </div>
+      </header>
+      <section id="slide">
+        <ul class="slide_container">
+          <li>
+            <div class="slide_img"></div>
+          </li>
+        </ul>
+        <article class="slide_container_arrow">
+          <span id="leftArrow" class="slide_Container_btn right"> </span>
+        </article>
+        <article class="slide_pager">
+          <span
+            ><video
+              src="./1118464_4k_Magic_3840x2160.mp4"
+              loop
+              source
+              autoplay
+              control
+              muted
+              preload
+          /></span>
+        </article>
+      </section>
+      <section id="main">
+        <div class="main_info_text">
+          <h1 class="main_info">
+            안녕하세요 :D <br />
+            창의적인 사고를 할 수 있는 <br />
+            프론트엔드 개발자 임다은입니다.
+          </h1>
+        </div>
+        <div class="main_img">
+          <img src="./img/main3.jpg" alt="main_img" />
+        </div>
+        <div class="main_desc">
+          <span>
+            <i class="fa-solid fa-user"></i><b>임다은</b><br />
+            <i class="fa-solid fa-cake-candles"></i><b>1994.01.25</b> <br />
+            <i class="fa-solid fa-house"></i><b>서울특별시 관악구</b> <br />
+            <i class="fa-solid fa-envelope"></i><b>ekdms534@naver.com</b> <br />
+            <i class="fa-solid fa-school"></i><b>경기대학교 조소과 학사</b
+            ><br />
+            <i class="fa-solid fa-graduation-cap"></i
+            ><b>한국교원대학교 미술교육과 석사</b><br />
+          </span>
+        </div>
+        <article class="main_slide"></article>
+      </section>
+      <button class="main_title_btn">
+        <a href="#" class="p_close">
+          <h1 class="main_title">ABOUT</h1>
+        </a>
+      </button>
+      <div class="items">
+        <!-- Add X icon here -->
+        <!-- <i class="fa-solid fa-xmark close-icon"></i> -->
+        <div class="item">
+          <div class="front">
+            <img id="img3" src="./img/img1.jpg" alt="space01" />
+            <h2>Hobby</h2>
+          </div>
+          <div class="back">
+            <p>
+              저는 예술고등학교, 미술대학을 나와 예술적인 것들을 아주 좋아해요.
+              주로 혼자 미술 전시회를 가거나 연예인, 친구 등의 인물화 그리는
+              것을 즐겨합니다.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img id="img1" src="./img/Favorite.jpg" alt="space02" />
+            <h2>Favorite</h2>
+          </div>
+          <div class="back">
+            <p>
+              저는 귀여운 것들을 아주 좋아합니다. 특히 짱구를 좋아하고,
+              카카오프렌즈의 라이언을 좋아해서 덕후처럼 인형과 피규어 들을 많이
+              모으고 있습니다.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img id="img2" src="./img/mbti.jpg" alt="space03" />
+            <h2>MBTI</h2>
+          </div>
+          <!-- <div class="front">
+            <img id="img2" src="./img/mbti.jpeg" alt="space03" />
+            <h2>Favorite</h2>
+          </div> -->
+          <div class="back">
+            <p>
+              INFJ와 ENFJ 중간, 매우 감성적이고 공감형으로 남을 돕거나 행복하게
+              하는 걸 좋아해서 지금까지 활동한 봉사시간만 100시간 이상이 됩니다.
+              교육봉사와 페이스페인팅 등의 봉사활동을 주로 했어요.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<!-- 
+<span>저의 장점은 오랜 기간 미술을 전공하여<br>
+  획기적인 아이디어를 도출할 수 있으며<br>
+  이러한 장점을 바탕으로 창의적인 웹을 만들 수 있어요.</span> -->
