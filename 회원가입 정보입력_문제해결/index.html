@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>회원가입</title>
+</head>
+<body>
+  <div class="login_box">
+
+      <span id="index"><h1>회원가입을 위해<br> 정보를 입력해주세요</h1></span>
+      <section>
+        <label for="name">* 이메일</lavel><br>
+            <input id="email"
+            type="text" 
+            email="email"
+            placeholder="이메일을 입력하세요."
+            />
+      </section> <br>
+      <section>
+        <label for="name">* 이름</label><br>
+        <input id="name"
+        type="text" 
+        name="search"
+        placeholder="이름을 입력하세요."
+        />
+      </section><br>
+      <section>  
+        <label for="name">* 비밀번호</label><br>
+          <input id="password"
+          type="password" 
+          name="password"
+          />
+      </section><br>
+      <section>
+        <label for="name">* 비밀번호 확인</label><br>
+          <input id="password_cheak"
+          type="password" 
+          name="password_cheak">
+      </section><br>
+      <section>
+        <input class="tell" type="tel" /> -
+        <input class="tell" type="tel" /> -
+        <input class="tell" type="tel" />
+      </section><br>
+      <section>
+        <span id="phone_cheak">000000</span>
+        <button>인증번호 전송</button>
+      </section><br>
+      <section>
+        <span id="time">3:00</span>
+        <button ID="time_btn">인증완료</button>
+        
+      </section><br>
+      <select class="area_box" name="area" id="area choose">
+        <optgroup>
+          <option>지역을 선택하세요</option>
+          <option>서울</option>
+          <option>경기</option>
+          <option>인천</option>
+          <option>전주</option>
+          <option>광주</option>
+          <option>부산</option>
+        </optgroup>
+      </select><br>
+      <br>
+      <div id="gender">
+        <input type="radio" name="gender" value="woman">여성
+        <input type="radio" name="gender" value="men">남성
+      </div>
+      <br>
+      <button id="login_btn">가입하기</button>
+
+  </div>
+</body>
+</html>
