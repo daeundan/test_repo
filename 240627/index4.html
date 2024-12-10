@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      padding: 10px;
+      background-color: #222;
+      color: bisque;
+    }
+  </style>
+  <style>
+    #container {
+      width: 500px;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #fff;
+      border: 2px solid #000;
+      padding: 18px
+    }
+    label {
+      color: #000;
+    }
+
+    button {
+      width: 500px;
+      margin: 10px auto;
+      display: flex;
+      padding: 10px;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+
+    input::placeholder {
+      opacity: 1;
+      transition: opacity 0.3s;
+    } 
+    input:focus {
+      outline: none;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  </style>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+</head>
+<body>
+  <meta charset="UTF-8">
+  <title>학사정보 조회서비스</title>
+
+</style>
+  </style>
+  <div id="container">
+  <form action="http://localhost:3000" method="get">
+    <label for="useId">
+      <h1 style="color: #fff"><b>학사정보 조회 서비스</b></label></h1>
+      <fieldset>
+          <legend id="user"><b>학사정보 조회 서비스</b></legend>
+          <div>
+            <div style="margin: 10px 0">
+            <label for="name">입학년도</label>
+            <input type="text" placeholder="년도월일 입력" />
+            <div style="margin: 10px 0">
+            <label for="name">이름</label>
+            <input type="text" placeholder="본명입력" />
+            <div style="margin: 10px 0">
+              <number for="number">학번</number>
+              <input type="text" placeholder="총 8자리 숫자"/>
+              <div style="margin: 10px 0">
+              <div>
+                <label for="major">학과</label>
+                <input type="text" placeholder="예) 의예과" />
+                <div style="margin: 10px 0">
+                <div style="margin: 10px 0">
+                  </fieldset>
+                  </legend>
+                  </div>
+                  <div>
+                    <button style="color: #fff; background-color: #000;" 
+                    type="submit">조회하기</button>
+                    <div style="margin: 10px 0">
+                    </div>
+      </body>
+</html>

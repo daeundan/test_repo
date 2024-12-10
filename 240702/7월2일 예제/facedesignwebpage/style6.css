@@ -1,0 +1,45 @@
+@import url("./reset6.css");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.gallery {
+  display: flex;
+  height: 100vh;
+  &:hover li {
+    flex: 1;
+  }
+  li {
+    border-right: 5px solid #000;
+    flex: 1;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    &:last-child {
+      border-right: none;
+    }
+    &:nth-child(1) {
+      background: url("./img/artistic-image-01.jpg") center center no-repeat;
+    }
+    &:nth-child(2) {
+      background: url("./img/artistic-image-02.jpg") center center no-repeat;
+    }
+    &:nth-child(3) {
+      background: url("./img/artistic-image-03.jpg") center center no-repeat;
+    }
+    &:nth-child(4) {
+      background: url("./img/artistic-image-04.jpg") center center no-repeat;
+    }
+    &:nth-child(5) {
+      background: url("./img/artistic-image-05.jpg") center center no-repeat;
+    }
+    &:hover {
+      flex: 3;
+      filter: grayscale(1);
+    }
+  }
+}

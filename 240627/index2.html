@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="useId">
+      <h3><b>점심 뭐 먹지?</b></label></h1>
+        <fieldset>
+          <h4>1. 당신이 좋아하는 음식을 선택하세요!</h4>
+          <p>한 가지 메뉴만 골라주세요</p>
+    <form action="http://localhost:3000" method="get">
+      <select name="food" id="food">
+        <option value="none" selected disabled>메뉴선택</option>
+        <optgroup>
+        <optgroup label="분식류"></optgroup>
+        <option value="food1">김밥</option>
+        <option value="food2">라면</option>
+        <option value="food3">떡볶이</option>
+        <option value="food4">라볶이</option>
+        <optgroup>
+        <optgroup label="식사류"></optgroup>
+          <option value="food6">제육덮밥</option>
+          <option value="food7">돈까스</option>
+          <option value="food8">콩국수</option>
+          <option value="food9">육개장</option>
+        </optgroup>
+        <optgroup>
+          <optgroup label="사이드"></optgroup>
+          <option value="food10">펩시콜라</option>
+          <option value="food10">칠성사이다</option>
+          <option value="food10">환타오렌지</option>
+          <option value="food10">환타파인애플</option>
+      </select>
+    </form>
+        </fieldset>
+  </body>
+</html>
