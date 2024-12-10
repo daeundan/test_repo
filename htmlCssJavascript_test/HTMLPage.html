@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chapter 6</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <!-- 초기화 -->
+  <style>
+    * { margin: 0; padding: 0;}
+    body { font-family: 'Helvetica', sans-serif;}
+    li { list-style: none;}
+    a {text-decoration: none;}
+  </style>
+  <!-- 헤더 -->
+  <style>
+    #main_header {
+      /* 배경 지정 */
+      height: 45px;
+      background: url("header_background.png");
+      /* 자손 위치 지정 */
+      position: relative;
+      text-align: center;
+      line-height: 45px;
+    }
+    #main_header >h1 {
+      color: white;
+    }
+    #main_header >a, #main_header >label {
+      display: block;
+      height: 32px;
+      position: absolute;
+    }
+    #main_header > a.left {
+      width: 62px;
+      left: 5px;
+      top: 7px;
+    }
+    #main_header > label.right {
+      width: 32px;
+      right: 5px;
+      top: 7px;
+    }
+  </style>
+  <!-- 스프라이트 이미지 -->
+  <style>
+    #main_header > a.left {
+      background: url("header_left_button.png");
+      background-position: 0px 0px;
+      text-indent: -99999px;
+    }
+    #main_header > label.right {
+      background: url("header_right_button.png");
+      background-position: -62px 0px;
+      text-indent: -999999px;
+    }
+  </style>
+  <!-- 토글 목록 -->
+  <style>
+    #toggle { display: none;}
+    #toggle + #wrap > #toggle_gnb_wrap {display: none;}
+    #toggle:checked + #wrap > #toggle_gnb_wrap {display: block;}
+    /* 레이아웃 색상 */
+    #toggle_gnb_wrap {
+      background: #363636;
+      padding: 15px;
+    }
+    #toggle_gnb {
+      background: #ffffff;
+      padding: 5px;
+    }
+    /* 토글 목록 */
+    #toggle_gnb > ul { overflow: hidden;}
+    #toggle_gnb > ul > li {
+      width: 80px;
+      float: left;
+    }
+  </style>
+  <!-- 내비게이션(1) -->
+  <style>
+    #top_gnb { 
+      overflow: hidden;
+      border-bottom: 1px solid black;
+      background: #B42111;
+    }
+    #top_gnb > div > a {
+      /* 수평정렬 */
+      float: left;
+      width: 25%;
+
+      /* 크기 및 색상, 정렬 */
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      color: white;    
+    }
+  </style>
+  <!-- 내비게이션(2) -->
+  <style>
+    #bottom_gnb {
+      display: table;
+      width: 100%;
+      border-bottom: 1px solid black;
+    }
+    #bottom_gnb > div {
+      display: table-cell;
+      position: relative;
+    }
+    #bottom_gnb > div > a {
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+    }
+    #bottom_gnb > div > a::before {
+      display: block;
+      position: absolute;
+      top: 9px; left: -1px;
+      width: 1px; height: 15px;
+      border-left: 1px solid black;
+      content: ''; /* 버튼 사이 ㅣ 주는 것 */
+    }
+  </style>
+  <!-- 본문 -->
+  <style>
+    #section_header {
+      padding: 20px;
+    }
+    #section_article {
+      padding: 10px;
+    }
+  </style>
+  <!-- 푸터 -->
+  <style>
+    #main_footer {
+      padding: 10px;
+      border-top: 3px solid black;
+      padding: 100px;
+      text-align: center;
+    }
+  </style>
+  <style>
+    #bottom_footer {
+      position: fixed;
+      height: 45px;
+      width: 100%;
+      background-color: #363636;
+      bottom: 0;
+      padding-top: 30px;
+      padding-bottom: 0;
+      text-indent: -999999px;
+    }
+  </style>
+</head>
+<body>
+  <input id="toggle" type="checkbox">
+  <div id="wrap">
+    <header id="main_header">
+      <a class="left" href="#">Main</a>
+      <h1>DAEUN</h1>
+      <label class="right" for="toggle">Toggle</label>
+    </header>
+    <div id="toggle_gnb_wrap">
+      <div id="toggle_gnb">
+        <ul>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav id="top_gnb">
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+    </nav>
+    <nav id="bottom_gnb">
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+    </nav>
+    <section id="main_section">
+      <header id="section_article">
+        <h1>창의적인 프론트엔드 개발자 임다은입니다.</h1>
+        <time>1994-01-25 - Birthday</time>
+      </header>
+      <article id="section_article">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti provident sequi eligendi fugit nobis iste quod est dolor tempora recusandae deserunt, numquam odio quae neque commodi odit modi assumenda necessitatibus!</p><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo praesentium numquam dolore sapiente ipsam id maiores ullam, quaerat expedita nobis in corporis veniam laudantium, facilis consectetur. At eaque nemo quos!</p><br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe aliquid culpa ducimus magnam tenetur ab accusamus hic sint, temporibus voluptatibus laboriosam deserunt, molestiae in omnis necessitatibus, eaque inventore alias ad.</p>
+      </article>
+    </section>
+    <footer id="main_footer">
+      <h3>Contect</h3>
+      <p> Tel: 010-5415-2514</p>
+      <p>Email: ekdms534@naver.com</p>
+      <address>Website Layout Basic</address>
+    </footer>
+    <div id="bottom_footer">toggle
+      <label class="left_button" for="toggle">Toggle</label>
+      <label class="right_button" for="toggle">Toggle</label>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
